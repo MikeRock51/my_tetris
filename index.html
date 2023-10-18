@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  <link rel="stylesheet" href="./styles.css">
+  <title>My Tetris</title>
+</head>
+
+<body>
+  <div id="main-containter">
+
+    <div class="game">
+      <canvas id="game" class="game-screen"></canvas>
+    </div>
+
+    <div class="stats">
+      <img id="logo" src="./images/The_Tetris_Company_logo.png">
+      <p class="mike">© Mike Rock 2023</p>
+      <canvas id="next" class="next"></canvas>
+      <canvas id="hold" class="hold"></canvas>
+      <div class="info">
+        <p>Score: <span id="score">0</span></p>
+        <p>Lines: <span id="lines">0</span></p>
+        <p>Level: <span id="level">0</span></p>
+      </div>
+      <button onclick="countdown(this)">Start/Pause</button>
+      <button class="sound-button" data-playing="false" role="switch" aria-checked="false">Sound</button>
+      <span id="timer"></span>
+    </div>
+
+    <div class="controller">
+      <h3>CONTROLS:</h3>
+      <div class="row">
+        <div id="keys">
+          <div>
+            <img src="./images/chevron-up.webp" alt="up">
+            <p>ROTATE</p>
+          </div>
+          <div>
+            <img src="./images/chevron-back.webp" alt="left">
+            <p>LEFT</p>
+          </div>
+          <div>
+            <img src="./images/chevron-forward.webp" alt="right">
+            <p>RIGHT</p>
+          </div>
+          <div>
+            <img src="./images/chevron-down.webp" alt="down">
+            <p>DOWN</p>
+          </div>
+        </div>
+        <div id="keys">
+          <div>
+            <img src="./images/whitespace.webp" alt="space">
+            <p>HARD DROP</p>
+          </div>
+          <div>
+            <img src="./images/esc.webp" alt="esc" class="esc">
+            <p class="esc">END GAME</p>
+          </div>
+          <div>
+            <img src="./images/c.webp" alt="c">
+            <p>HOLD PIECE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <audio src='./audio/TetrisThemeMusic.ogg'></audio>
+  <script type="text/javascript" src="./constants.js"></script>
+  <script type="text/javascript" src="./field.js"></script>
+  <script type="text/javascript" src="./tetrominos.js"></script>
+  <script type="text/javascript" src="./my_tetris.js"></script>
+  <script type="text/javascript" src="./audio.js"></script>
+</body>
+
+</html>
